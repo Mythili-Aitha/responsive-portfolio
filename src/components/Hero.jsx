@@ -1,16 +1,21 @@
 import React from 'react';
-import '../styles/Hero.css'
+import '../styles/Hero.css';
+
 const Hero = () => {
   return (
     <section className="hero" id="home">
       <div className="hero-content">
-        <h1>Hi, I'm <span>Mythili Aitha</span></h1>
-        <p>Frontend Developer</p>
-        <a href="#contact" className="btn">Hire Me</a>
+        <h1>
+          Hi, I’m <span className="highlight">Mythili Aitha</span>
+        </h1>
+        <h2>Frontend Developer</h2>
+        <p>
+          I specialize in creating interactive and beautiful user interfaces. 
+          Let’s work together to build something amazing!
+        </p>
+        <a href="#contact" className="hero-btn">Hire Me</a>
       </div>
-      <div className="hero-img">
-        <img src="https://via.placeholder.com/300" alt="profile" />
-      </div>
+      {/* Optional: Add an illustration or a photo to the right side */}
     </section>
   );
 };

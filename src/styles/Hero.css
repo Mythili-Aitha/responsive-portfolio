@@ -1,34 +1,66 @@
 .hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px;
-  }
-  
-  .hero-content {
-    max-width: 500px;
-  }
-  
-  .hero-content h1 {
-    font-size: 3rem;
-  }
-  
-  .hero-content h1 span {
-    color: #6c63ff;
-  }
-  
-  .hero-content .btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #6c63ff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-  }
-  
-  .hero-img img {
-    width: 300px;
-    border-radius: 50%;
-  }
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background: #f4f4f4; /* or a gradient like linear-gradient(to right, #645cff, #a183ff) */
+  text-align: center;
+  min-height: 80vh;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero .highlight {
+  color: #645cff; /* Brand color */
+}
+
+.hero h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.hero p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+.hero-btn {
+  display: inline-block;
+  background-color: #645cff;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #4b3ce5;
+}
+
+/* Dark mode adjustments */
+body.dark-mode .hero {
+  background: #1e1e1e;
+}
+body.dark-mode .hero h1,
+body.dark-mode .hero h2,
+body.dark-mode .hero p {
+  color: #f1f1f1;
+}
+body.dark-mode .hero .hero-btn {
+  background-color: #645cff;
+}
+body.dark-mode .hero .hero-btn:hover {
+  background-color: #4b3ce5;
+}
