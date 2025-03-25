@@ -1,32 +1,80 @@
-import React, { useState, useEffect } from 'react';
-import { FaMoon, FaSun } from 'react-icons/fa';
+import React, { useState } from 'react';
+import {
+  AppBar,
+  Toolbar,
+  IconButton,
+  Typography,
+  Button,
+  Box,
+  Drawer,
+  List,
+  ListItem,
+  ListItemText,
+  useMediaQuery,
+  useTheme
+} from '@mui/material';
+import { Brightness4, Brightness7, Menu as MenuIcon } from '@mui/icons-material';
 
-const Navbar = () => {
-  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+const Navbar = ({ darkMode, onToggleDarkMode }) => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
-  useEffect(() => {
-    document.documentElement.classList.toggle('dark', theme === 'dark');
-    localStorage.setItem('theme', theme);
-  }, [theme]);
+  const menuItems = [
+    { label: 'Home', href: '#home' },
+    { label: 'About', href: '#about' },
+    { label: 'Skills', href: '#skills' },
+    { label: 'Work Experience', href: '#work-experience' },
+    { label: 'Projects', href: '#projects' },
+    { label: 'Education', href: '#education' },
+    { label: 'Contact', href: '#contact' },
+  ];
 
-  const toggleTheme = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
+  const toggleDrawer = (open) => () => {
+    setDrawerOpen(open);
   };
 
+  const drawerContent = (
+    <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
+      <List>
+        {menuItems.map((item, index) => (
+          <ListItem button component="a" href={item.href} key={index}>
+            <ListItemText primary={item.label} />
+          </ListItem>
+        ))}
+      </List>
+    </Box>
+  );
+
   return (
-    <nav className="flex justify-between items-center px-6 py-4 bg-white dark:bg-gray-900 text-gray-900 dark:text-white shadow-md">
-      <div className="text-xl font-bold">Mythili Aitha</div>
-      <ul className="flex gap-6 text-sm">
-        <li><a href="#about" className="hover:text-blue-500">About</a></li>
-        <li><a href="#skills" className="hover:text-blue-500">Skills</a></li>
-        <li><a href="#experience" className="hover:text-blue-500">Experience</a></li>
-        <li><a href="#projects" className="hover:text-blue-500">Projects</a></li>
-        <li><a href="#contact" className="hover:text-blue-500">Contact</a></li>
-      </ul>
-      <button onClick={toggleTheme} className="text-xl">
-        {theme === 'dark' ? <FaSun /> : <FaMoon />}
-      </button>
-    </nav>
+    <AppBar position="sticky">
+      <Toolbar>
+        <Typography variant="h6" sx={{ flexGrow: 1 }}>
+          Mythili Aitha
+        </Typography>
+        {isMobile ? (
+          <>
+            <IconButton color="inherit" onClick={toggleDrawer(true)}>
+              <MenuIcon />
+            </IconButton>
+            <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer(false)}>
+              {drawerContent}
+            </Drawer>
+          </>
+        ) : (
+          <Box sx={{ display: 'flex', gap: 2 }}>
+            {menuItems.map((item, index) => (
+              <Button color="inherit" href={item.href} key={index}>
+                {item.label}
+              </Button>
+            ))}
+          </Box>
+        )}
+        <IconButton color="inherit" onClick={onToggleDarkMode}>
+          {darkMode ? <Brightness7 /> : <Brightness4 />}
+        </IconButton>
+      </Toolbar>
+    </AppBar>
   );
 };
 
