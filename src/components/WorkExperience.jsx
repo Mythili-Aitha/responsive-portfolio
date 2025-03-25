@@ -20,7 +20,7 @@ const workData = [
 
 const WorkExperience = () => {
   return (
-    <Box id="work-experience" sx={{ py: 8, backgroundColor: 'background.default' }}>
+    <Box id="work-experience" sx={{ py: { xs: 4, sm: 6, md: 8 }, backgroundColor: 'background.default' }}>
       <Container maxWidth="md">
         <Typography variant="h4" gutterBottom align="center">
           Work Experience

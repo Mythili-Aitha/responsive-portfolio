@@ -1,14 +1,15 @@
 import React, { useState, useMemo } from 'react';
 import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
-import { deepPurple, grey } from '@mui/material/colors';import './App.css';
+import { deepPurple } from '@mui/material/colors';
+import './App.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
-import Contact from './components/Contact';
+import WorkExperience from './components/WorkExperience';
 import Projects from './components/Projects';
 import Education from './components/Education';
-import WorkExperience from './components/WorkExperience';
+import Contact from './components/Contact';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -49,11 +50,10 @@ function App() {
       <Hero />
       <About />
       <Skills />
-      <WorkExperience/>
-      <Projects/>
-      <Education/>
+      <WorkExperience />
+      <Projects />
+      <Education />
       <Contact />
-    
     </ThemeProvider>
   );
 }

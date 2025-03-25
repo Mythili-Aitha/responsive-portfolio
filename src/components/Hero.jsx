@@ -14,7 +14,7 @@ const Hero = () => {
         textAlign: 'center',
         backgroundColor: 'background.default',
         color: 'text.primary',
-        p: 4,
+        p: { xs: 2, sm: 4, md: 6 },
       }}
     >
       <Typography variant="h3" component="h1" gutterBottom>

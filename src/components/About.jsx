@@ -3,7 +3,7 @@ import { Box, Container, Typography } from '@mui/material';
 
 const About = () => {
   return (
-    <Box id="about" sx={{ py: 8 }}>
+    <Box id="about" sx={{ py: { xs: 4, sm: 6, md: 8 } }}>
       <Container maxWidth="md">
         <Typography variant="h4" gutterBottom>
           About Me

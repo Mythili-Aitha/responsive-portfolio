@@ -16,7 +16,7 @@ const educationData = [
 
 const Education = () => {
   return (
-    <Box id="education" sx={{ py: 8, backgroundColor: 'background.paper' }}>
+    <Box id="education" sx={{ py: { xs: 4, sm: 6, md: 8 }, backgroundColor: 'background.paper' }}>
       <Container maxWidth="md">
         <Typography variant="h4" gutterBottom align="center">
           Education

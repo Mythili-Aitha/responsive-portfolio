@@ -21,7 +21,7 @@ const projectData = [
 
 const Projects = () => {
   return (
-    <Box id="projects" sx={{ py: 8 }}>
+    <Box id="projects" sx={{ py: { xs: 4, sm: 6, md: 8 } }}>
       <Container maxWidth="lg">
         <Typography variant="h4" gutterBottom>
           Projects

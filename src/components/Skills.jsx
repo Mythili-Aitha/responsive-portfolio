@@ -33,13 +33,13 @@ const skills = [
 
 const Skills = () => {
   return (
-    <Box id="skills" sx={{ py: 8, px: 2 }}>
+    <Box id="skills" sx={{ py: { xs: 4, sm: 6, md: 8 }, px: 2 }}>
       <Typography variant="h4" align="center" gutterBottom>
         My Skills
       </Typography>
       <Grid container spacing={2} justifyContent="center">
         {skills.map((skill, index) => (
-          <Grid item key={index}>
+          <Grid item xs={6} sm={4} md={3} lg={2} key={index}>
             <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10}>
               <Chip 
                 label={skill} 
