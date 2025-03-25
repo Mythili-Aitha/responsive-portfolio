@@ -1,22 +1,41 @@
 import React from 'react';
-import '../styles/Hero.css';
+import { Box, Typography, Button } from '@mui/material';
 
 const Hero = () => {
   return (
-    <section className="hero" id="home">
-      <div className="hero-content">
-        <h1>
-          Hi, I’m <span className="highlight">Mythili Aitha</span>
-        </h1>
-        <h2>Frontend Developer</h2>
-        <p>
-          I specialize in creating interactive and beautiful user interfaces. 
-          Let’s work together to build something amazing!
-        </p>
-        <a href="#contact" className="hero-btn">Hire Me</a>
-      </div>
-      {/* Optional: Add an illustration or a photo to the right side */}
-    </section>
+    <Box
+      id="home"
+      sx={{
+        minHeight: '60vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        textAlign: 'center',
+        backgroundColor: 'background.default',
+        color: 'text.primary',
+        p: 4,
+      }}
+    >
+      <Typography variant="h3" component="h1" gutterBottom>
+        Hi, I’m <span style={{ color: '#645cff' }}>Mythili Aitha</span>
+      </Typography>
+      <Typography variant="h5" component="h2" gutterBottom>
+        Full Stack Developer
+      </Typography>
+      <Typography variant="body1" maxWidth="600px" mb={4}>
+        I specialize in creating interactive user interfaces while developing robust back-end systems. Let’s work together to build something amazing!
+      </Typography>
+      <Button
+        variant="contained"
+        color="primary"
+        href="https://drive.google.com/file/d/1MPUlz1v3crgJCJGJJ6t7DJG2193ZwsVS/view?usp=sharing"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View Resume
+      </Button>
+    </Box>
   );
 };
 
