@@ -10,6 +10,7 @@ import WorkExperience from './components/WorkExperience';
 import Projects from './components/Projects';
 import Education from './components/Education';
 import Contact from './components/Contact';
+import NotFound from './components/NotFound';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -42,6 +43,15 @@ function App() {
   const handleToggleDarkMode = () => {
     setDarkMode((prev) => !prev);
   };
+
+  if (window.location.pathname !== "/") {
+    return (
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <NotFound />
+      </ThemeProvider>
+    );
+  }
 
   return (
     <ThemeProvider theme={theme}>

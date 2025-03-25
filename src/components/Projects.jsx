@@ -1,42 +1,75 @@
 import React from 'react';
-import { Box, Container, Typography, Grid, Paper } from '@mui/material';
+import {
+  Box,
+  Container,
+  Typography,
+  Grid,
+  Card,
+  CardContent,
+  CardActions,
+  Button,
+} from '@mui/material';
 
 const projectData = [
   {
     title: 'Aspect-Based Comment Summarizer',
     description:
-      'Developed an Aspect-Based Sentiment Analysis system using both abstractive and extractive methods for accurate comment summarization. Implemented ensemble NLP models (T5Generator and RoBERTa) achieving 70% improvement in aspect identification accuracy. Built a scalable, parallel processing framework handling over 100,000 comments daily, optimizing BART to achieve 80% precision with a 40% improvement in speed.',
+      'Developed an Aspect-Based Sentiment Analysis system using both abstractive and extractive methods for accurate comment summarization. Implemented ensemble NLP models achieving significant improvements in aspect identification accuracy.',
+    link: '#',
   },
   {
-    title: 'Serverless Hosting of Travel Away Web-Application',
+    title: 'Serverless Travel Away Web-App',
     description:
-      'Built a web application for travel planning, managing accommodation and transportation in a serverless environment. Enabled users to create profiles and select destinations and tour packages using various AWS services including API Gateway, AWS Lambda, Cognito, RDS, and Amplify.',
+      'Built a web application for travel planning in a serverless environment. Leveraged AWS services including API Gateway, Lambda, Cognito, and RDS.',
+    link: '#',
   },
   {
-    title: 'Interactive Web Application with Flask',
+    title: 'Interactive Flask Web App',
     description:
-      'Developed an interactive web application using Flask, hosted on AWS EC2. Features include user registration, login, and file upload with word count functionality. Deployment improved accessibility by 40% and user engagement by 25%.',
+      'Created an interactive Flask web application with user registration, login, and file upload features. Deployed on AWS EC2 for better accessibility.',
+    link: '#',
   },
 ];
 
 const Projects = () => {
   return (
-    <Box id="projects" sx={{ py: { xs: 4, sm: 6, md: 8 } }}>
+    <Box id="projects" sx={{ py: 8 }}>
       <Container maxWidth="lg">
-        <Typography variant="h4" gutterBottom>
+        <Typography variant="h4" gutterBottom align="center">
           Projects
         </Typography>
-        <Grid container spacing={3} mt={2}>
+        <Grid container spacing={4} sx={{ mt: 2 }}>
           {projectData.map((project, index) => (
-            <Grid item xs={12} key={index}>
-              <Paper sx={{ p: 3 }}>
-                <Typography variant="h6" gutterBottom>
-                  {project.title}
-                </Typography>
-                <Typography variant="body1" color="text.secondary">
-                  {project.description}
-                </Typography>
-              </Paper>
+            <Grid item xs={12} sm={6} md={4} key={index}>
+              <Card
+                sx={{
+                  height: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                }}
+                elevation={3}
+              >
+                <CardContent>
+                  <Typography variant="h6" gutterBottom>
+                    {project.title}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    {project.description}
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Button
+                    size="small"
+                    color="primary"
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Learn More
+                  </Button>
+                </CardActions>
+              </Card>
             </Grid>
           ))}
         </Grid>
