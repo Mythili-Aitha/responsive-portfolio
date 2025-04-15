@@ -1,24 +1,24 @@
-import React from 'react';
-import { Box, Container, Typography } from '@mui/material';
+import React from "react";
+import "../styles/About.css";
 
 const About = () => {
   return (
-    <Box id="about" sx={{ py: { xs: 4, sm: 6, md: 8 } }}>
-      <Container maxWidth="md">
-        <Typography variant="h4" gutterBottom>
-          About Me
-        </Typography>
-        <Typography variant="body1" paragraph>
-          I’m a passionate Full Stack Developer with a strong foundation in both front-end and back-end technologies. My journey in tech began with a curiosity for design and a drive to solve complex problems.
-        </Typography>
-        <Typography variant="body1" paragraph>
-          I hold a Master of Science in Computer Science from the University of Houston and a Bachelor of Technology in Computer Science & Engineering from Sreenidhi Institute of Science & Technology. My experience ranges from building dynamic, responsive web applications to creating scalable, efficient back-end solutions, all while deploying modern cloud-based architectures.
-        </Typography>
-        <Typography variant="body1" paragraph>
-          When I’m not coding, I enjoy exploring the latest technologies, contributing to open-source projects, and refining user experiences through innovative UI/UX designs.
-        </Typography>
-      </Container>
-    </Box>
+    <section className="about section" id="about">
+      <div className="container">
+        <h2 className="section-title">About Me</h2>
+        <p className="about-text">
+          I'm Mythili Aitha, a full-stack developer with a Master's in Computer
+          Science from the University of Houston. I specialize in building
+          scalable web applications and cloud-based solutions using technologies
+          like React, Java, Spring Boot, and AWS. With hands-on experience as a
+          Web Developer at UH and a Software Developer at Agile Solutions, I've
+          worked on projects ranging from university websites and eCommerce
+          platforms to AI-powered systems and serverless apps. I'm passionate
+          about turning complex problems into user-friendly, impactful
+          solutions.
+        </p>
+      </div>
+    </section>
   );
 };
 

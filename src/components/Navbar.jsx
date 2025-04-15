@@ -1,80 +1,57 @@
-import React, { useState } from 'react';
-import {
-  AppBar,
-  Toolbar,
-  IconButton,
-  Typography,
-  Button,
-  Box,
-  Drawer,
-  List,
-  ListItem,
-  ListItemText,
-  useMediaQuery,
-  useTheme
-} from '@mui/material';
-import { Brightness4, Brightness7, Menu as MenuIcon } from '@mui/icons-material';
+import React, { useState, useEffect } from "react";
+import { FaMoon, FaSun } from "react-icons/fa";
+import { CgMenuRightAlt, CgClose } from "react-icons/cg";
+import "../styles/Navbar.css";
 
-const Navbar = ({ darkMode, onToggleDarkMode }) => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-  const [drawerOpen, setDrawerOpen] = useState(false);
+const Navbar = () => {
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+  const [navOpen, setNavOpen] = useState(false);
 
-  const menuItems = [
-    { label: 'Home', href: '#home' },
-    { label: 'About', href: '#about' },
-    { label: 'Skills', href: '#skills' },
-    { label: 'Work Experience', href: '#work-experience' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Education', href: '#education' },
-    { label: 'Contact', href: '#contact' },
-  ];
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", theme === "dark");
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
-  const toggleDrawer = (open) => () => {
-    setDrawerOpen(open);
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
   };
 
-  const drawerContent = (
-    <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
-      <List>
-        {menuItems.map((item, index) => (
-          <ListItem button component="a" href={item.href} key={index}>
-            <ListItemText primary={item.label} />
-          </ListItem>
-        ))}
-      </List>
-    </Box>
-  );
+  const links = [
+    { id: "hero", label: "Home" },
+    { id: "about", label: "About" },
+    { id: "skills", label: "Skills" },
+    { id: "experience", label: "Experience" },
+    { id: "projects", label: "Projects" },
+    { id: "certifications", label: "Certifications" },
+    { id: "education", label: "Education" },
+    { id: "contact", label: "Contact" },
+  ];
 
   return (
-    <AppBar position="sticky">
-      <Toolbar>
-        <Typography variant="h6" sx={{ flexGrow: 1 }}>
-          Mythili Aitha
-        </Typography>
-        {isMobile ? (
-          <>
-            <IconButton color="inherit" onClick={toggleDrawer(true)}>
-              <MenuIcon />
-            </IconButton>
-            <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer(false)}>
-              {drawerContent}
-            </Drawer>
-          </>
-        ) : (
-          <Box sx={{ display: 'flex', gap: 2 }}>
-            {menuItems.map((item, index) => (
-              <Button color="inherit" href={item.href} key={index}>
-                {item.label}
-              </Button>
-            ))}
-          </Box>
-        )}
-        <IconButton color="inherit" onClick={onToggleDarkMode}>
-          {darkMode ? <Brightness7 /> : <Brightness4 />}
-        </IconButton>
-      </Toolbar>
-    </AppBar>
+    <nav className="navbar">
+      <div className="navbar-container">
+        <div className="logo">Mythili</div>
+
+        <ul className={`nav-links ${navOpen ? "open" : ""}`}>
+          {links.map((link) => (
+            <li key={link.id}>
+              <a href={`#${link.id}`} onClick={() => setNavOpen(false)}>
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <div className="icons">
+          <button onClick={toggleTheme}>
+            {theme === "dark" ? <FaSun /> : <FaMoon />}
+          </button>
+          <button className="menu-toggle" onClick={() => setNavOpen(!navOpen)}>
+            {navOpen ? <CgClose /> : <CgMenuRightAlt />}
+          </button>
+        </div>
+      </div>
+    </nav>
   );
 };
 

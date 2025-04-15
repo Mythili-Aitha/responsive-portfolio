@@ -1,0 +1,54 @@
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .project-card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    width: 600px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    color: antiquewhite;
+  }
+  
+  .project-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .project-description {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+    line-height: 1.5;
+    padding-left: 1.1rem;
+    gap: 1;
+  }
+  
+  .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .tech-tag {
+    font-size: 0.8rem;
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 4px 8px;
+    border-radius: 8px;
+  }
+  
+  .dark .tech-tag {
+    background-color: #333;
+    color: #eee;
+  }
+  
