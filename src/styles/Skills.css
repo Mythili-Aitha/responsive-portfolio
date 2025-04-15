@@ -1,0 +1,61 @@
+/* Container */
+.skills-section {
+    padding: 60px 20px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .skills-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 30px;
+  }
+  
+  /* Grid Layout */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Icon container */
+  .skill-icon-wrapper {
+    width: 120px;
+    height: 120px;
+    border-radius: 9999px;
+    background-color: #c9c947;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .skill-icon-wrapper:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 12px #413b60;
+  }
+  
+  /* Icon image */
+  .skill-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+  }
+  
+  /* Dark/Light Theme Variables */
+  :root {
+    --bg-color: #ffffff;
+    --text-color: #4d2b81;
+  }
+  
+  .dark {
+    --bg-color: #0a0f2c;
+    --text-color: #90aecf;
+  }
+  
