@@ -1,3 +1,32 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Light mode defaults */
+body {
+  background-color: #fff;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Dark mode overrides */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+/* Optional: Adjust navbar styling in dark mode */
+.navbar {
+  background-color: inherit;
+  border-bottom: 1px solid #ccc;
+}
+
+body.dark-mode .navbar {
+  border-bottom: 1px solid #444;
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
