@@ -1,4 +1,3 @@
-import React from "react";
 import "../styles/Hero.css";
 import profileImg from "../assets/profile.png";
 const Hero = () => {
@@ -9,7 +8,16 @@ const Hero = () => {
           <h1>
             Hi, I'm <span>Mythili Aitha</span>
           </h1>
-          <p>Full-Stack Developer</p>
+          <p>
+            Full-stack software engineer with 2+ years of experience building
+            scalable, responsive web applications and full-stack platforms using
+            ReactJS, Python (Flask), Java (Spring Boot), and AWS. Proven ability
+            to design and deploy robust REST APIs, optimize frontend
+            performance, and collaborate in Agile teams. Passionate about
+            building data-driven tools that deliver real-world impact. Strong
+            foundation in data pipelines, testing frameworks, and software
+            architecture.{" "}
+          </p>
           <a href="#contact" className="btn">
             Hire me
           </a>

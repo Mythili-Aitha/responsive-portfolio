@@ -23,6 +23,8 @@ const skills = [
   { img: react, name: "React" },
   { img: python, name: "Python" },
   { img: java, name: "Java" },
+  { img: springboot, name: "SpringBoot" },
+  { img: jira, name: "Jira" },
   { img: c, name: "C" },
   { img: nodejs, name: "Node JS" },
   { img: typescript, name: "TypeScript" },

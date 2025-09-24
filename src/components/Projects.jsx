@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../styles/Projects.css";
@@ -24,10 +24,18 @@ const projects = [
   {
     title: "Serverless Hosting of Travel Away Web-App",
     description: [
-      "Created a travel planner web app with profile, destination, and tour package selection features.",
-      "Hosted using AWS services like API Gateway, Lambda, Cognito, RDS, and Amplify.",
+      "Owned end-to-end delivery of a travel booking platform using AWS Lambda, RDS, and React, from prototyping to production deployment.",
+      "Designed scalable REST APIs and integrated frontend/backend systems, applying feedback loops from test users to refine UI/UX.",
     ],
-    tech: ["AWS", "Lambda", "Cognito", "RDS", "Amplify", "API Gateway"],
+    tech: [
+      "AWS",
+      "Lambda",
+      "Cognito",
+      "RDS",
+      "Amplify",
+      "API Gateway",
+      "REST APIs",
+    ],
   },
   {
     title: "Severity Evaluation for COVID-19 (SECOVID-A)",

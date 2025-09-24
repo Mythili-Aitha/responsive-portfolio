@@ -1,4 +1,3 @@
-import React from "react";
 import "../styles/Education.css";
 import { snist, uh } from "../constants/Constant";
 const educationList = [

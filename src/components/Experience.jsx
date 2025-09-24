@@ -1,4 +1,3 @@
-import React from "react";
 import { a, uh } from "../constants/Constant";
 import "../styles/Experience.css";
 const experiences = [
@@ -8,9 +7,10 @@ const experiences = [
     role: "Web Developer",
     duration: "Dec 2023 – May 2024",
     points: [
-      "Updated the university website using HTML, CSS, JavaScript, ReactJS, and Cascade CMS, increasing page views by 40% and user engagement by 25%.",
-      "Improved data display using Python tools like Pandas and NumPy, and created interactive charts with D3.js and Chart.js, boosting engagement by 40%.",
-      "Optimized website performance by reducing load times by 30% through image optimization, CSS/JS minimization, and caching strategies.",
+      "Updated and extended university web properties using ReactJS, JavaScript, HTML/CSS, raising page views by 40% and engagement by 25%.",
+      "Designed and developed full-stack features with ReactJS and REST APIs, iterating based on stakeholder feedback and usability insights. Improved content workflows in Cascade CMS. Produced usage/operations dashboards with D3.js/Chart.js, enabling stakeholders to track trends at a glance.",
+      "Monitored frontend performance using dev tools, optimized asset delivery, and reduced load times by 30%. Collaborated via Jira/Confluence for specs, meeting notes, and release updates; supported cross-team reviews.",
+      "Authored clear technical docs for components, data contracts, and deployment steps.",
     ],
   },
   {
@@ -19,9 +19,9 @@ const experiences = [
     role: "Software Developer",
     duration: "May 2021 – July 2022",
     points: [
-      "Designed and deployed an expert system using NLP, Deep Learning, and Flask, improving disease treatment predictions by 30%.",
-      "Developed an XSJS parser in JavaScript to generate abstract syntax trees and deployed it on GCP, enhancing parsing efficiency by 25%.",
-      "Securely migrated confidential data from XSJS code to GCP buckets, improving cloud migration security and performance.",
+      "Prototyped and deployed an NLP-driven expert system with Flask and XGBoost, improving recommendation accuracy by 30%. Implemented REST endpoints for model inference and admin utilities; added input validation and logging.",
+      "Created a JavaScript XSJS parser to AST, deployed on GCP, improving parsing throughput by 25%. Designed and maintained asynchronous data pipelines to GCP storage, improving throughput and ensuring traceability.",
+      "Tuned MySQL structures/queries for faster reads; added indices and streamlined ETL loads. Wrote technical specs, test plans, and runbooks; collaborated with stakeholders for incremental releases.",
     ],
   },
 ];

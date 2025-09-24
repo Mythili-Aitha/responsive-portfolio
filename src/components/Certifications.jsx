@@ -5,7 +5,7 @@ const certifications = [
   {
     title: "AWS Certified Cloud Practitioner",
     issuer: "Amazon Web Services (AWS)",
-    year: "2024",
+    year: "2025",
     link: "https://www.credly.com/badges/0da13041-7233-4872-bc35-793bfd724161/linked_in_profile",
   },
 ];
