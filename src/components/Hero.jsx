@@ -13,10 +13,7 @@ const Hero = () => {
             scalable, responsive web applications and full-stack platforms using
             ReactJS, Python (Flask), Java (Spring Boot), and AWS. Proven ability
             to design and deploy robust REST APIs, optimize frontend
-            performance, and collaborate in Agile teams. Passionate about
-            building data-driven tools that deliver real-world impact. Strong
-            foundation in data pipelines, testing frameworks, and software
-            architecture.{" "}
+            performance, and collaborate in Agile teams.{" "}
           </p>
           <a href="#contact" className="btn">
             Hire me
