@@ -23,7 +23,8 @@
 }
 
 .hero-content h1 {
-  font-size: 5rem;
+  font-size: 3rem;
+  font-family: 'Times New Roman', Times, serif;
   color: #dadd1f;
   margin-bottom: 10px;
 }
