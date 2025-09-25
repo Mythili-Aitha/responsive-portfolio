@@ -11,6 +11,8 @@ import c from "../assets/c.png";
 import mysql from "../assets/mysql.png";
 import nodejs from "../assets/nodejs.png";
 import typescript from "../assets/typescript.png";
+import springboot from "../assets/springboot.png";
+import jira from "../assets/jira.png";
 export {
   html,
   css,
@@ -25,4 +27,6 @@ export {
   uh,
   a,
   snist,
+  springboot,
+  jira,
 };

@@ -13,6 +13,8 @@ import {
   nodejs,
   typescript,
   mysql,
+  springboot,
+  jira,
 } from "../constants/Constant";
 import "../styles/Skills.css";
 
